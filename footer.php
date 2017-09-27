@@ -1,3 +1,3 @@
-<footer class="container-fluid bg-footer text-center">
+<footer class="my-footer bg-footer text-center">
     <p>IIT Madras</p> 
 </footer>

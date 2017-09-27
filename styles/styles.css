@@ -2,9 +2,8 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  /* font-size: 20px; */
   line-height: 1.8;
-  color: #f5f6f7;
+  /* color: #f5f6f7; */
 }
 
 p {font-size: 16px;}
@@ -18,7 +17,10 @@ p {font-size: 16px;}
   background-color: #474e5d; /* Dark Blue */
   color: #ffffff;
 }
-
+.bg-signup { 
+  background-color: #1abc9c; /* Green */
+  color: #ffffff;
+}
 .container-fluid {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -30,8 +32,6 @@ p {font-size: 16px;}
 
 /* navbar */
 .navbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
@@ -40,13 +40,19 @@ p {font-size: 16px;}
 }
 
 .navbar-nav li a:hover {
-  color: #1abc9c !important;
+  color: #19BC9C !important;
 }
 
 /* footer */
 .bg-footer { 
   background-color: #2f2f2f;
   color: #ffffff;
+}
+.my-footer{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /* Login modal */
@@ -62,18 +68,28 @@ input[type=text], input[type=password] {
   color: black;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #1abc9c;
-  color: white;
-  /* padding: 14px 20px;
-  margin: 8px 0; */
-  border: none;
-  cursor: pointer;
-  /* width: 20%; */
+.myButton:hover {
+  opacity: 0.8;
 }
 
-button:hover {
+.myAlert{
+  width: 200px;
+  z-index: 2;
+  position: absolute;
+  top: 14%;
+  left: 20px;
+  right: 20px;
+  border: 1px solid black;
+}
+
+.applyButton{
+  background-color: #F8F8F8;
+  color: #777777;
+  border: 0;
+  border-radius: 2px;
+}
+.applyButton:hover {
+  color: #19BC9C;
   opacity: 0.8;
 }
 
@@ -101,7 +117,8 @@ button:hover {
 /* Modal Content/Box */
 .modal-content {
   background-color: #ECE7E7;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  /* margin: 5% auto 15% auto; 5% from the top, 15% from the bottom and centered */
+  margin-top:4%;
   border: 1px solid #888;
   position: fixed;
   right: 0px;
@@ -122,4 +139,9 @@ button:hover {
 @keyframes animatezoom {
   from {transform: scale(0)} 
   to {transform: scale(1)}
+}
+
+/* signup form */
+.error{
+  color: red;
 }
