@@ -73,10 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $conn->query($sqlupdatepassword);
     }
     echo '<div class="alert alert-success alert-dismissablealert-dismissable fade in container myAlert"><a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>Successfully updated</div>';
-    // $_SESSION['updateName'] = $updateName;
-    // $_SESSION['updateEmail'] = $updateEmail;
-    // $_SESSION['updatePassword'] = $updatePassword;
-    // header("location:update.php");
   }
   
 }
@@ -100,7 +96,7 @@ $conn->close();
 
 <body class="bg-signup">
 <?php include 'header.php';?> 
-<div class="container">
+<div class="container" style="margin-top:90px">
   <div class="row main">
     <div class="main-login main-center">
       <h2>Edit Profile</h2>

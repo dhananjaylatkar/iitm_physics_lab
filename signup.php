@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rollNumberErr = "* Roll Number is required";
   } else {
     $rollNumber = test_input($_POST["rollNumber"]);
+    $rollNumber = strtoupper($rollNumber);
   }
   // check for unique roll number
   $sql = "SELECT rollNumber FROM Users";

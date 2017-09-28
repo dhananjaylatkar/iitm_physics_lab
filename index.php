@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rollNumberErr = "* Roll Number is required";
   } else {
     $rollNumber = test_input($_POST["rollNumber"]);
+    $rollNumber = strtoupper($rollNumber);
     $rollNumberErr = "";
   }
   if (empty($_POST["password"])) {
@@ -75,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -93,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 </nav>
-  <div class="container-fluid bg-1 text-center">
+  <div class="container-fluid bg-1 text-center" style="margin-top:82px">
     <h3 class="margin">Physics Lab</h3>
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
   </div>

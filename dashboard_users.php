@@ -4,7 +4,9 @@ session_start();
 if(!isset($_SESSION['rollNumber'])){
   header("location:logout.php");
 }
-
+if($_SESSION['rollNumber']=="ADMIN" || $_SESSION['rollNumber']=="admin"){
+  header("location:admin_panel.php");
+}
 $navbarPageName = "Dashborad";
 $navbarRollNumber = strtoupper($_SESSION['rollNumber']);
 
@@ -21,7 +23,7 @@ $navbarRollNumber = strtoupper($_SESSION['rollNumber']);
 
 <body>
 <?php include 'header.php';?> 
-  <div class="container-fluid bg-1 text-center">
+  <div class="container-fluid bg-1 text-center" style="margin-top:82px">
     <h2 class="margin">Apply for test</h2>
     <h3>Click register to apply for a test.</h3>
     <a href="#" class="btn btn-lg applyButton" role="button">Register</a>
